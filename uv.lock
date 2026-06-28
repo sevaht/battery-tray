@@ -13,6 +13,7 @@ dependencies = [
     { name = "pillow" },
     { name = "platformdirs" },
     { name = "sevaht-gui" },
+    { name = "sevaht-utility" },
 ]
 
 [package.dev-dependencies]
@@ -31,6 +32,7 @@ requires-dist = [
     { name = "pillow", specifier = ">=12.2.0" },
     { name = "platformdirs", specifier = ">=4.10.0" },
     { name = "sevaht-gui" },
+    { name = "sevaht-utility", specifier = ">=1.0.0" },
 ]
 
 [package.metadata.requires-dev]

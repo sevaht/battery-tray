@@ -3,8 +3,9 @@
 from __future__ import annotations
 
 import argparse
-import logging
 from typing import TYPE_CHECKING
+
+from sevaht_utility.log_utility import add_log_arguments, configure_logging
 
 from . import CONFIG_FILE_NAME, user_config_path
 from .battery import list_batteries, read_battery
@@ -64,23 +65,8 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Show the window at startup instead of starting tray-only.",
     )
 
-    verbosity = parser.add_mutually_exclusive_group()
-    verbosity.add_argument(
-        "-v", "--verbose", action="store_true", help="Enable debug logging."
-    )
-    verbosity.add_argument(
-        "-q", "--quiet", action="store_true", help="Only log warnings."
-    )
+    add_log_arguments(parser)
     return parser
-
-
-def _configure_logging(args: argparse.Namespace) -> None:
-    level = logging.INFO
-    if args.verbose:
-        level = logging.DEBUG
-    elif args.quiet:
-        level = logging.WARNING
-    logging.basicConfig(level=level, format="%(levelname)s: %(message)s")
 
 
 def _battery_label(name: str) -> str:
@@ -190,7 +176,7 @@ def _run_config_mode(
 def main(argv: Sequence[str] | None = None) -> int:
     parser = _build_parser()
     args = parser.parse_args(argv)
-    _configure_logging(args)
+    configure_logging(args)
 
     config_path = user_config_path() / CONFIG_FILE_NAME
     _validate_mode_combination(args, parser)
