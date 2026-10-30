@@ -59,9 +59,10 @@ class BatteryTray:
         self.app = TkApp()
         self.tray_icon = self.app.create_tray_icon(
             APP_NAME,
-            self._tooltip(),
+            "Battery Tray",
             self._render(),
             activate_label="Configure...",
+            tooltip=self._tooltip(),
         )
         self.window = BatterySelectorWindow(
             self.app,
@@ -126,7 +127,7 @@ class BatteryTray:
         # Push the current status to the tray tooltip and to both the tray and
         # window icons (set_app_icon keeps them in sync).
         if self.tray_icon is not None:
-            self.tray_icon.title = self._tooltip()
+            self.tray_icon.tooltip = self._tooltip()
         key = self._current_icon_key()
         if key != self._icon_key:
             self.app.set_app_icon(self._render())

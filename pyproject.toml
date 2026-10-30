@@ -28,7 +28,7 @@ classifiers = [
 dependencies = [
     "Pillow>=12.2.0",
     "sevaht-utility>=1.0.0",
-    "sevaht-gui",
+    "sevaht-gui>=1.0.1",
     "platformdirs>=4.10.0",
 ]
 
@@ -53,6 +53,7 @@ Issues = "https://github.com/sevaht/battery-tray/issues"
 
 [tool.hatch.version]
 source = "vcs"
+fallback-version = "0.0.0.dev0"
 
 [tool.hatch.version.raw-options]
 fallback_version = "0.0.0"
