@@ -28,7 +28,7 @@ classifiers = [
 dependencies = [
     "Pillow>=12.2.0",
     "sevaht-utility>=1.0.0",
-    "sevaht-gui>=1.0.1",
+    "sevaht-gui>=1.0.3",
     "platformdirs>=4.10.0",
 ]
 

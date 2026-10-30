@@ -31,7 +31,7 @@ dev = [
 requires-dist = [
     { name = "pillow", specifier = ">=12.2.0" },
     { name = "platformdirs", specifier = ">=4.10.0" },
-    { name = "sevaht-gui", specifier = ">=1.0.1" },
+    { name = "sevaht-gui", specifier = ">=1.0.3" },
     { name = "sevaht-utility", specifier = ">=1.0.0" },
 ]
 
@@ -985,7 +985,7 @@ wheels = [
 
 [[package]]
 name = "sevaht-gui"
-version = "1.0.2"
+version = "1.0.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "dbus-next", marker = "sys_platform == 'linux'" },
@@ -994,9 +994,9 @@ dependencies = [
     { name = "python-xlib", marker = "sys_platform == 'linux'" },
     { name = "sevaht-utility" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/cc/cf/f7034e1f02f06425b96d79c43c35fde584b2b56bed2d19a05fe8844deae6/sevaht_gui-1.0.2.tar.gz", hash = "sha256:436ab7153348d37151cf33a76f2f2728ab9e850550d10bef72a69a7b88c32c99", size = 28281, upload-time = "2026-10-30T19:36:21.096Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ba/35/63eebf4d3422f668a7b21936a203f3edcf99d357fe25df67b11650192fe0/sevaht_gui-1.0.3.tar.gz", hash = "sha256:06a6f78fafe5ba99f0fc3d1e409097ee67cf06ef9d0281629c68394ade9da8fd", size = 31909, upload-time = "2026-10-30T20:30:28.801Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a8/15/e8dac2aa3f9711da78398e4999247a0c8d59d82bb3f2ee5118a2f79b4465/sevaht_gui-1.0.2-py3-none-any.whl", hash = "sha256:4d6362eb75e4887589f31bd30ba57558f7d53c60235f33b76f406c76ac888384", size = 30446, upload-time = "2026-10-30T19:36:19.836Z" },
+    { url = "https://files.pythonhosted.org/packages/72/ac/5abe418fba22f19ac98a823b52812cce70ccee491ef2c673f12b7a9072e3/sevaht_gui-1.0.3-py3-none-any.whl", hash = "sha256:8b82e6b7e9a4aa899e6582abed111a237b524513d03190afa0db6f976a1790d2", size = 32832, upload-time = "2026-10-30T20:30:27.393Z" },
 ]
 
 [[package]]
